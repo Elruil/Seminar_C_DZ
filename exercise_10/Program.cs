@@ -6,8 +6,9 @@ while (true)
 {
     Console.Write("Введите трехзначное число: ");
     if (int.TryParse(Console.ReadLine(), out num))
+    if ((num / 100 > 0) && (num / 1000 == 0))
         break;  
-    Console.WriteLine("Ошибка ввода!");
+        Console.WriteLine("Ошибка ввода!");
 }
 
 Console.WriteLine($"Вы ввели число {num}");
